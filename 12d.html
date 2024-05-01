@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button{
+      background-color: rgb(223, 22, 55);
+      border-style: dotted;
+      color: yellow;
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <title>12d</title>
+</head>
+<body>
+
+  <button class="js-button" onclick="
+      changeText();
+    ">Start</button>
+
+  <script>
+    
+    const buttonElement= document.querySelector('.js-button');
+
+    // function changeText(){
+
+    //   buttonElement.innerHTML = 'Loading...';
+    //   setTimeout(function(){
+    //     buttonElement.innerHTML = 'Finished!';
+    //   },1000);
+
+    // }
+
+    function changeText(){
+
+      buttonElement.innerHTML = 'Loading...';
+      setTimeout(() => {
+        buttonElement.innerHTML = 'Finished!';
+      },1000);
+
+    }
+
+  </script>
+</body>
+</html>
+
+<!-- start -> loading... -> finished -->

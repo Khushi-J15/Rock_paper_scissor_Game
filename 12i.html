@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>App</title>
+</head>
+<body>
+  <button onclick="
+    messages++;
+    displayNotification();
+    ">Add</button>
+
+  <button onclick="
+    if(messages > 0){
+      messages--;
+    }
+    
+    // If there are no new messages, stop displaying
+    // the notification in the tab.
+    if(messages === 0){
+      stopNotification();
+    }
+  ">Remove</button>
+
+  <script>
+    let messages = 2;
+    let intervalId;
+
+    // we'll use this variable to keep track of whether or not we're displaying the notification;
+    let isDisplaying;
+
+    // Start displaying the notification in the tab when the page first loads.
+
+    displayNotification();
+
+    function displayNotification(){
+       // If we're already displaying the notification,
+        // stop this function because we don't want to
+        // create 2 intervals at the same time.
+        if(isDisplaying){
+          return;
+        }
+
+        isDisplaying = true;
+
+      intervalId = setInterval(() => {
+        if(document.title === 'App'){
+          document.title = `(${messages}) New messages`;
+        }
+        else{
+          document.title = 'App';
+        }
+      },1000);
+
+    }
+
+    function stopNotification(){
+      isDisplaying = false;
+      clearInterval(intervalId);
+      document.title = 'App';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button{
+      background-color: rgb(124, 220, 214);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <title>12e</title>
+</head>
+<body>
+
+  <button class="js-button">Add to cart</button>
+
+    <p class="js-show-para"></p>
+
+  <script>
+    
+    const paraElement= document.querySelector('.js-show-para');
+    const buttonElement = document.querySelector('.js-button');
+    buttonElement.addEventListener('click',() => {
+      display();
+    });
+
+    function display(){
+
+      paraElement.innerHTML = 'Added';
+      setTimeout(() => {
+        paraElement.innerHTML = '';
+      },2000);
+
+    }
+
+  </script>
+</body>
+</html>
+
+<!-- click again within 1sec - 1.5 sec the msg will disappear quickly -->

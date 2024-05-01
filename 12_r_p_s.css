@@ -1,0 +1,62 @@
+body{
+  background-color:  rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon{
+  height: 50px;
+}
+
+.move-button{
+  background-color: transparent;
+  border : 3px solid white; 
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top : 50px;
+}
+.score{
+  margin-top: 60px;
+}
+
+.js-auto-play-button,
+.reset-score-button,
+.reset-confirm-button{
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.reset-confirm-button{
+  margin-left: 10px;
+}
+
+.js-reset-confirmation{
+  color: white;
+  width: 460px;
+  border-color:black;
+  padding: 5px;
+}
+
+.js-reset-confirm-yes,
+.js-reset-confirm-no{
+  background-color: rgb(133, 118, 19);
+  border-style: solid;
+  font-weight: bold;
+  border-color:aquamarine;
+}

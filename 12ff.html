@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button{
+      background-color: rgb(124, 220, 214);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <title>12f</title>
+</head>
+<body>
+
+  <button class="js-button">Add to cart</button>
+
+    <p class="js-show-para"></p>
+
+  <script>
+    let timeoutId;
+    document.querySelector('.js-button').addEventListener('click',() => {
+      display();
+    });
+
+    function display(){
+      const paraElement= document.querySelector('.js-show-para');
+      paraElement.innerHTML = 'Added';
+
+       // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        paraElement.innerHTML = '';
+      },2000);
+
+    }
+
+  </script>
+</body>
+</html>
+
+<!-- message is deleted after 2 secs when we reclick within 1 sec - 1.5 sec  -->

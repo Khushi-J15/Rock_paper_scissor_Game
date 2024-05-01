@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12n</title>
+</head>
+<body>
+  <script>
+    let foods = ['egg','apple','egg','egg','ham'];
+    console.log(removeEggs(foods));
+
+    function removeEggs(foods){
+      let count = 0;
+      return foods.filter((food) => {
+        if(food === 'egg' && count < 2){
+          count++;
+          return false;
+        }
+        else{
+          return true;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- removing first two eggs using filter() -->

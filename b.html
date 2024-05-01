@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions are values</title>
+</head>
+<body>
+  <script> // like we assign value to variable , we can assign functions to variable becoz functions are also values
+    const num = 2;
+    const function1 = function /*name*/(){
+      console.log('hello2');
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    console.log('+++++++++++++++++++++\n\n');
+
+    const object1 = {
+      num: 2,
+      func: function(){ // method is a function inside an object
+        console.log('hello3');
+      }
+    };
+    object1.func();
+
+  </script>
+</body>
+</html>
