@@ -2,8 +2,12 @@ body{
   background-color:  rgb(25, 25, 25);
   color: white;
   font-family: Arial;
+  margin-top: 50px;
+  margin-left: 500px;
 }
-
+h1{
+  color:aquamarine;
+}
 .title{
   font-size: 30px;
   font-weight: bold;
@@ -59,4 +63,29 @@ body{
   border-style: solid;
   font-weight: bold;
   border-color:aquamarine;
+}
+
+@media screen and (max-width: 912px){
+  h1, .title{
+    font-size: 10px;
+  }
+  
+  .move-icon{
+    height: 20px;
+  }
+
+  
+  .move-button{
+    background-color: transparent;
+    border : 3px solid white; 
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  body{
+    display : inline-block;
+  }
 }
